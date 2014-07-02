@@ -29,7 +29,48 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Flippadoo</title>
+        <title>Whami</title>
+        <script type="text/javascript">
+            $(function () {
+                $('.Datepicker').datepick();
+
+
+            });
+            function getDateTime() {
+                var now = new Date();
+                var year = now.getFullYear();
+                var month = now.getMonth() + 1;
+                var day = now.getDate();
+                var hour = now.getHours();
+                var minute = now.getMinutes();
+                var second = now.getSeconds();
+                if (month.toString().length == 1) {
+                    var month = '0' + month;
+                }
+                if (day.toString().length == 1) {
+                    var day = '0' + day;
+                }
+                if (hour.toString().length == 1) {
+                    var hour = '0' + hour;
+                }
+                if (minute.toString().length == 1) {
+                    var minute = '0' + minute;
+                }
+                if (second.toString().length == 1) {
+                    var second = '0' + second;
+                }
+                var dateTime = year + '/' + month + '/' + day + ' ' + hour + ':' + minute + ':' + second;
+                return dateTime;
+            }
+
+            function creatTickitFn() {
+                var apiKey = $('#apiKey').val();
+                var url = 'http://208.75.75.92:8080/flippadoo/mobile/tickitService/' + apiKey + '/createTickit';
+                $("#createTickit").attr("action", url);
+
+                $("#createTickit").submit();
+            }
+</script>
     </head>
     <body>
         <div class="app">
@@ -38,7 +79,7 @@
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/Flippadoo.js"></script>
+        <!-- script type="text/javascript" src="js/Flippadoo.js"></!-->
        
         <div class="wrapper">
     <div style="width: 200px; height: 100px; margin: 30px auto; padding: 0 20px; background: #f1f1eb; border: 1px solid #0071BC; color: #0071BC; font-size: 15px; -moz-box-shadow:   0 0 10px 0 rgba(0,0,0,0.28); box-shadow:  0 0 10px 0 rgba(0,0,0,0.28); -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;">
@@ -82,8 +123,8 @@
 
 
                 </p>
-                <p class="event received">We are good to go!</p>
-                <p><a href="www.cbc.ca"></a>Trying to insert a record</a></p>
+                <p class="event received">Testing a record insertion</p>
+                
             </div>
         </div>
          <script type="text/javascript">
