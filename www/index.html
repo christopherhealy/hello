@@ -70,6 +70,9 @@
 
                 $("#createTickit").submit();
             }
+            function startup() {
+                document.getElementById("WhamiButton").addEventListener("click", creatTickitFn);
+            }
 </script>
     </head>
     <body>
@@ -79,6 +82,7 @@
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+<<<<<<< HEAD
         <!-- script type="text/javascript" src="js/Flippadoo.js"></!-->
        
         <div class="wrapper">
@@ -111,7 +115,9 @@
                
             <dl>
             <div class="buttonBlock">
-                <button class="submitBTN" onclick="creatTickitFn();">Whami!</button> </div>
+                <input type="button" id="WhamiButton" value="Whami!"> 
+
+            </div>
 	     
         </form>
     </div>
@@ -129,6 +135,11 @@
         </div>
          <script type="text/javascript">
              app.initialize();
+=======
+        <script type="text/javascript" src="js/Flippadoo.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+>>>>>>> parent of fcec1ae... Test 7
         </script>
     </body>
 </html>
