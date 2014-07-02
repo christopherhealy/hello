@@ -34,18 +34,14 @@
     <body>
         <div class="app">
             <h1>Flippadoo</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Welcome to Whami</p>
-                <p class="event received">We are good to go!</p>
-                <p>Trying to insert a record</p>
-            </div>
+            
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/Flippadoo.js"></script>
        
         <div class="wrapper">
-    <div style="width: 200px; height: 300px; margin: 30px auto; padding: 0 20px; background: #f1f1eb; border: 1px solid #0071BC; color: #0071BC; font-size: 15px; -moz-box-shadow:   0 0 10px 0 rgba(0,0,0,0.28); box-shadow:  0 0 10px 0 rgba(0,0,0,0.28); -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;">
+    <div style="width: 200px; height: 100px; margin: 30px auto; padding: 0 20px; background: #f1f1eb; border: 1px solid #0071BC; color: #0071BC; font-size: 15px; -moz-box-shadow:   0 0 10px 0 rgba(0,0,0,0.28); box-shadow:  0 0 10px 0 rgba(0,0,0,0.28); -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;">
         <form name="createTickit" id ="createTickit" action="http://208.75.75.92:8080/flippadoo/mobile/tickitService/createTickit" enctype="multipart/form-data" method="post">
             <div class="header"></div>
               <dl>
@@ -79,6 +75,13 @@
         </form>
     </div>
 </div>
+        <div>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Welcome to Whami</p>
+                <p class="event received">We are good to go!</p>
+                <p><a href="www.cbc.ca"></a>Trying to insert a record</a></p>
+            </div>
+        </div>
          <script type="text/javascript">
              app.initialize();
         </script>
